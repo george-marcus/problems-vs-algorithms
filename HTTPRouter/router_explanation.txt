@@ -1,0 +1,26 @@
+Router Analysis:
+
+I used a trie node to form a trie which is a special kind of trees
+In each trie node I used two properties:
+
+1- a handler value (which is a string in my case) whcih could be the provided handler
+or 'not found handler'
+
+2- a default dictionary to prevent key errors and return a new trie node for non-existant keys
+this dictionary holds a char as key and a child trie node as value. I used this dictionary
+in path parts lookups which provides all the child nodes with their keys.
+
+To insert a path first I split it to array on the "/" char. Then,
+I looped through each path parts starting from the root node.
+Then for each part, I checked whether the part in the dictionary of child_nodes 
+If yes, I check the child trie node with next path part.
+If no, the path part will be added to the dict as a trie node,
+If the path part is the last one in the list of path parts, I assign 
+the handler property to provided handler value.
+
+To lookup a path, I do the same with splitting the path into parts first,
+Then, I traversed the trie based on the part sequence if no part is found 
+I return not found handler
+
+Time Complexity: O(n), as I loop through all paths in insert and find
+Space Complexity: O(n) as I used a trie node for each char

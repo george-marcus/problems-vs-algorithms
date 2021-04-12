@@ -1,0 +1,20 @@
+Autocomplete words Analysis:
+
+I used a trie node to form a trie which is a special kind of trees
+In each trie node I used two properties:
+
+1- a boolean value to indicate that this node has the last-char of the word that forms the tire
+2- a default dictionary to prevent key errors and return a new trie node for non-existant keys
+this dictionary holds a char as key and a child trie node as value. I used this dictionary
+in char lookups which provides all the child nodes with their keys.
+
+To insert a word I looped through each char in it starting from the root node.
+Then for each char, I checked whether the character in the dictionary of child_nodes 
+If yes, I check the child trie node with next char in the word.
+If no, the char will be added to the dict as a trie node,
+If the char is the last one in the word, I set the is_end_of_word property to true.
+
+To find a sub sequence of chars, I traversed the trie based on the char sequence provided as prefix
+
+Time Complexity: O(n) as I loop through all word chars in insert and find
+Space Complexity: O(n) as I used a trie node for each char

@@ -1,0 +1,13 @@
+Sort 012 Analysis:
+
+I traversed the array once and kept track of three indexes: start, last and the matched zeros count.
+I performed swapping of values and update the corresponding index accordingly.
+When the value is 0, I swapped the value of start index with the last matched index of a zero value
+When the value is 1, I just incremented start index as value 1 should be in the middle of the array
+When the value is 2, I swapped start index's value with last index's value and changed
+    the value of the last index should be 2. Then decremented last index as I won't need it again
+    as it has its final value 2.
+
+Time Complexity: O(n) as its a single traversal algorithm
+Space Complexity: O(1) as I used a no special data structure to store the data 
+                       and used in place comparison and swaps

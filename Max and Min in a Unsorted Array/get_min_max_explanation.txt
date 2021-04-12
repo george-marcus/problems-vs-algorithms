@@ -1,0 +1,11 @@
+Get Min And Max Analysis:
+
+I used to variable to keep track of the min and max values,
+and initialized them with the first entry of the ints array.
+
+I used linear search to traverse the array from second index to the last one 
+For each integer, I compared them against stored min value or max value and updated them when conditions are met
+
+Time Complexity: O(n) as I looped through the array once
+
+Space Complexity: O(1) as no special data structures were used array lookups

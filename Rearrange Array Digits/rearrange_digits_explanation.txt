@@ -1,0 +1,14 @@
+Rearrange Digits Analysis:
+
+As We assume that all input list elements are in the range [0, 9], 
+I used a dictionary to hold keys of digits from 0,9 with the values 1 for the occurence and
+0 for otherwise which gives binary search similarities when looping through the input-list
+to check if a number is in the occurence dict and move it to the left place according to the 
+matched count index.
+
+Finally, I looped through input list indexes inversely from last to start
+As I had a sorted input list, I can loop inversely through it and generate 
+two numbers by using odd and even indexes
+
+Time Complexity: O(nlogn) as I used logn for matched count and n for looping through the entire list to rearrange
+Space Complexity: O(n) as I used dictionary to store count

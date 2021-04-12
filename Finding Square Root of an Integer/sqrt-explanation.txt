@@ -1,0 +1,11 @@
+Square Root Calculation Analysis:
+
+I Used binary search algorithm to split problem into smaller problems.
+The Idea behind finding a square root of a number is to
+find the mid point between the upper bound and lower bound
+Then we should discard either the upper half or the lower half
+depending on the value of the calculated mid  multiplied by itself.
+Eventually we should to figure out the floor value of the approximate square root
+
+Time Complexity: O(log(n)) as I used binary search to find the square root
+Space Complexity:  O(1) as I used no special data structure to implement this algorithm

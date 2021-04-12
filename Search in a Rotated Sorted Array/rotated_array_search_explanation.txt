@@ -1,0 +1,18 @@
+Rotated Array Search Analysis:
+
+I used binary search by assigning the start_index to mid_index value
+on each iteration. I checked for three cases that our value could be equal to 
+1- if the mid-index's value is the one we're looking for.
+2- if the start-index's value is what we're looking for.
+3- if the last-index's value is what we're looking for
+
+Otherwise I update the start-index according to two conditions:
+1- if the number is less than the value of the start or the last index, I should increment the mid-index and
+assign this value to the start-index variable
+
+2- if otherwise, I should decremnt the mid-index and assign its this value to the last-index.
+
+Then I calculate the new mid-index and repeat the cycle.
+
+Time Complexity: O(logn) as I used binary search
+Space Complexity: O(1) as I used no special data structures to store the data
