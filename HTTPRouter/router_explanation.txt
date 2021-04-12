@@ -3,7 +3,7 @@ Router Analysis:
 I used a trie node to form a trie which is a special kind of trees
 In each trie node I used two properties:
 
-1- a handler value (which is a string in my case) whcih could be the provided handler
+1- a handler value (which is a string in my case) that could be the provided handler string
 or 'not found handler'
 
 2- a default dictionary to prevent key errors and return a new trie node for non-existant keys
@@ -22,5 +22,11 @@ To lookup a path, I do the same with splitting the path into parts first,
 Then, I traversed the trie based on the part sequence if no part is found 
 I return not found handler
 
-Time Complexity: O(n), as I loop through all paths in insert and find
-Space Complexity: O(n) as I used a trie node for each char
+Time complexity: O(n) 
+    Here's a breakdown of the the two major function in a router trie
+        where n denotes the number of parts in provided path
+
+    1- the insert function: it has O(n) as I looped through nodes of the trie.
+    2- the find function: the same as insert, it has O(n) 
+
+Space complexity: O(n) where n denotes the number of path parts 

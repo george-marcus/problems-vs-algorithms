@@ -16,5 +16,14 @@ If the char is the last one in the word, I set the is_end_of_word property to tr
 
 To find a sub sequence of chars, I traversed the trie based on the char sequence provided as prefix
 
-Time Complexity: O(n) as I loop through all word chars in insert and find
-Space Complexity: O(n) as I used a trie node for each char
+Time complexity: O(n m) -> O(n)
+    Here's a breakdown of the the three major function in an autocomplete trie
+        where n denotes the number of parts in provided word
+        and m denotes the number of chars in each word
+
+    1- the insert function: it has O(n) as I looped through nodes of the trie.
+    2- the find function: the same as insert, it has O(n)
+    3- the suffixes function: it has O(n m) -> O(n) 
+        as it depends on the number of words and the number of chars
+
+Space complexity: O(n) where n denotes the number of chars in each word
